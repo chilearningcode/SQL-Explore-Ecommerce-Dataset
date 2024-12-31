@@ -15,7 +15,8 @@ Click on the **"ga_sessions_"** table to open it.
 ## III. Eploring the Dataset 
 
 ### Query 01: calculate total visit, pageview, transaction for Jan, Feb and March 2017 (order by month)
-`SELECT distinct
+```ruby
+SELECT distinct
   format_date("%Y%m",parse_date("%Y%m%d", date)) as month 
   , count(totals.visits) as visits 
   , sum(totals.pageviews) as pageviews
@@ -23,6 +24,7 @@ Click on the **"ga_sessions_"** table to open it.
 FROM `bigquery-public-data.google_analytics_sample.ga_sessions_2017*`
 where _table_suffix between '0101' and '0331' 
 group by 1
-order by 1;`
+order by 1;
+```
 
 
