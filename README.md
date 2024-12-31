@@ -26,11 +26,11 @@ WHERE _table_suffix between '0101' and '0331'
 GROUP BY 1
 ORDER BY 1;
 ```
-| month | visits | pageviews | transactions |
-|---|---|---|---|
-| 201701 | 64694 | 257708 | 713 |
-| 201702 | 62192 | 233373 | 733 |
-| 201703 | 69931 | 259522 | 993 |
+| Row | month | visits | pageviews | transactions |
+|---|---|---|---|---|
+| 1 | 201701 | 64694 | 257708 | 713 |
+| 2 | 201702 | 62192 | 233373 | 733 |
+| 3 | 201703 | 69931 | 259522 | 993 |
 
 
 ### Query 02: Bounce rate per traffic source in July 2017 (Bounce_rate = num_bounce/total_visit) (order by total_visit DESC)
@@ -44,13 +44,71 @@ FROM `bigquery-public-data.google_analytics_sample.ga_sessions_201707*`
 GROUP BY 1
 ORDER BY 2 desc, 3 desc;
 ```
-| source | total_visits | total_no_of_bounces | bounce_rates |
-|---|---|---|---|
-| google | 38400 | 19798 | 51.557	| 
-| (direct) | 19891 | 8606 | 43.266 |
-| youtube.com | 6351 | 4238 | 66.73 |
-| analytics.google.com | 1972 | 1064 | 53.955 |
-| Partners | 1788 | 936 | 52.349 |
-| m.facebook.com | 669 | 430 | 64.275 |
-| google.com | 368 | 183 | 49.728 |
-| ... |
+| Row | source | total_visits | total_no_of_bounces | bounce_rates |
+|---|---|---|---|---|
+| 1 | google | 38400 | 19798 | 51.557	| 
+| 2 | (direct) | 19891 | 8606 | 43.266 |
+| 3 | youtube.com | 6351 | 4238 | 66.73 |
+| 4 | analytics.google.com | 1972 | 1064 | 53.955 |
+| 5 | Partners | 1788 | 936 | 52.349 |
+| 6 | m.facebook.com | 669 | 430 | 64.275 |
+| 7 | google.com | 368 | 183 | 49.728 |
+| 8 | ... |
+
+
+## -- Query 3: Revenue by traffic source by week, by month in June 2017
+```sql
+WITH  
+  month_data as (
+    SELECT  
+      'Month' as time_type 
+      ,format_date("%Y%m",parse_date("%Y%m%d", date)) as time -- fixed 
+      ,trafficSource.source as source 
+      ,round(sum(product.productRevenue) /1000000, 4) as revenue
+    FROM `bigquery-public-data.google_analytics_sample.ga_sessions_201706*` ,
+    UNNEST (hits) hits
+    ,UNNEST (hits.product) product
+    WHERE product.productRevenue is not null 
+    GROUP BY 1,2,3
+    ORDER BY 4 desc
+  )
+  , week_data as (
+    SELECT DISTINCT 
+      'Week' as time_type
+      ,format_date("%Y",parse_date("%Y%m%d", date)) as year -- fixed 
+      ,format_date("%W",parse_date("%Y%m%d", date)) as no_of_week
+      ,trafficSource.source as source
+      ,round(sum(product.productRevenue) /1000000, 4) as revenue
+    FROM `bigquery-public-data.google_analytics_sample.ga_sessions_201706*`, 
+    UNNEST (hits) hits
+    ,UNNEST (hits.product) product
+    WHERE product.productRevenue is not null 
+    GROUP BY 1,2,3,4
+    ORDER BY 5 desc
+  )
+  SELECT DISTINCT *
+  FROM month_data
+UNION ALL 
+  SELECT DISTINCT
+    time_type
+    ,concat(year, no_of_week) as time
+    ,source
+    ,revenue 
+  FROM week_data
+  ORDER BY 4 desc;
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
