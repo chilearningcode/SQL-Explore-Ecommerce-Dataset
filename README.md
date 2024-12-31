@@ -33,7 +33,23 @@ ORDER BY 1;
 | 201703 | 69931 | 259522 | 993 |
 
 
-
-
-
-
+### Query 02: Bounce rate per traffic source in July 2017 (Bounce_rate = num_bounce/total_visit) (order by total_visit DESC)
+```sql 
+SELECT DISTINCT
+  trafficSource.source
+  , count(totals.visits) total_visits
+  , count(totals.bounces) total_no_of_bounces
+  , round(count(totals.bounces)*100.0 /count(totals.visits), 3) bounce_rates
+FROM `bigquery-public-data.google_analytics_sample.ga_sessions_201707*`
+GROUP BY 1
+ORDER BY 2 desc, 3 desc;
+```
+| source | total_visits | total_no_of_bounces | bounce_rates |
+| google | 38400 | 19798 | 51.557	| 
+| (direct) | 19891 | 8606 | 43.266 |
+| youtube.com | 6351 | 4238 | 66.73 |
+| analytics.google.com | 1972 | 1064 | 53.955 |
+| Partners | 1788 | 936 | 52.349 |
+| m.facebook.com | 669 | 430 | 64.275 |
+| google.com | 368 | 183 | 49.728 |
+| ... |
