@@ -45,6 +45,7 @@ GROUP BY 1
 ORDER BY 2 desc, 3 desc;
 ```
 | source | total_visits | total_no_of_bounces | bounce_rates |
+|---|---|---|---|
 | google | 38400 | 19798 | 51.557	| 
 | (direct) | 19891 | 8606 | 43.266 |
 | youtube.com | 6351 | 4238 | 66.73 |
