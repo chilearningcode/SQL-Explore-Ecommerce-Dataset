@@ -15,7 +15,7 @@ Click on the **"ga_sessions_"** table to open it.
 ## III. Eploring the Dataset 
 
 ### Query 01: calculate total visit, pageview, transaction for Jan, Feb and March 2017 (order by month)
-```ruby
+```c
 SELECT DISTINCT 
   format_date("%Y%m",parse_date("%Y%m%d", date)) as month 
   , count(totals.visits) as visits 
