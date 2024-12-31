@@ -3,6 +3,7 @@
 ### Overview
 This project leveraged SQL to analyze a comprehensive e-commerce dataset, providing actionable insights for marketing and sales strategy development. By using Google Big Querry for querying and aggregating key metrics, this analysis will identify sales trends, customer segmentation opportunities, and effective marketing campaign targets, ultimately supporting informed decision-making and improved business performance.
 
+
 ## II. Dataset Access 
 The e-commerce dataset is stored in a public Google BigQuery dataset. To access the dataset, follow these steps:
 
@@ -11,6 +12,7 @@ Navigate to the BigQuery console and select your newly created project.
 In the navigation panel, select "Add Data" and then "Search a project".
 Enter the project ID **"bigquery-public-data.google_analytics_sample.ga_sessions"** and click "Enter".
 Click on the **"ga_sessions_"** table to open it.
+
 
 ## III. Eploring the Dataset 
 
@@ -31,7 +33,6 @@ ORDER BY 1;
 | 1 | 201701 | 64694 | 257708 | 713 |
 | 2 | 201702 | 62192 | 233373 | 733 |
 | 3 | 201703 | 69931 | 259522 | 993 |
-
 
 ### Query 02: Bounce rate per traffic source in July 2017 (Bounce_rate = num_bounce/total_visit) (order by total_visit DESC)
 ```sql 
@@ -55,8 +56,7 @@ ORDER BY 2 desc, 3 desc;
 | 7 | google.com | 368 | 183 | 49.728 |
 | 8 | ... |
 
-
-## -- Query 3: Revenue by traffic source by week, by month in June 2017
+### Query 3: Revenue by traffic source by week, by month in June 2017
 ```sql
 WITH  
   month_data as (
@@ -97,7 +97,16 @@ UNION ALL
   FROM week_data
   ORDER BY 4 desc;
 ```
-
+ | Row	 | time_type | time | source | revenue
+ |---|---|---|---|---|
+ | 1	 | Month | 201706 | (direct) | 97333.6197
+ | 2	 | Week | 201724 | (direct) | 30908.9099
+ | 3	 | Week | 201725 | (direct) | 27295.3199
+ | 4	 | Month | 201706 | google | 18757.1799
+ | 5	 | Week | 201723 | (direct) | 17325.6799
+ | 6	 | Week | 201726 | (direct) | 14914.81
+ | 7	 | Week | 201724 | google | 9217.17 
+ | 8
 
 
 
