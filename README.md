@@ -31,7 +31,10 @@ ORDER BY 1;
 | 1 | 201701 | 64694 | 257708 | 713 |
 | 2 | 201702 | 62192 | 233373 | 733 |
 | 3 | 201703 | 69931 | 259522 | 993 |
-Pageviews are relatively stable, with a slight dip in February but recovering in March. Transactions consistently increase over the three months, with a significant jump in March. The data suggests an upward trend in user engagement and transactions as the quarter progresses, which could be due to promotional activities or seasonal factors.
+
+Pageviews are relatively stable, with a slight dip in February but recovering in March. Transactions consistently increase over the three months, with a significant jump in March. 
+
+The data suggests an upward trend in user engagement and transactions as the quarter progresses, which could be due to promotional activities or seasonal factors.
 
 ### Query 02: Bounce rate per traffic source in July 2017 (Bounce_rate = num_bounce/total_visit) (order by total_visit DESC)
 ```sql 
