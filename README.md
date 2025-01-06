@@ -33,7 +33,6 @@ ORDER BY 1;
 | 3 | 201703 | 69931 | 259522 | 993 |
 
 Pageviews are relatively stable, with a slight dip in February but recovering in March. Transactions consistently increase over the three months, with a significant jump in March. 
-
 The data suggests an upward trend in user engagement and transactions as the quarter progresses, which could be due to promotional activities or seasonal factors.
 
 ### Query 02: Bounce rate per traffic source in July 2017 (Bounce_rate = num_bounce/total_visit) (order by total_visit DESC)
@@ -58,7 +57,8 @@ ORDER BY 2 desc, 3 desc;
 | 7 | google.com | 368 | 183 | 49.728 |
 | 8 | ... |
 
-Google drives the highest traffic but also high on bounce rate. YouTube and Facebook have the highest bounce rate (>60), while (direct) traffic shows better engagement (<40)
+Google drives the highest traffic but also high on bounce rate. YouTube and Facebook have the highest bounce rate (>60), while (direct) traffic shows better engagement (<40). 
+Consider focusing on sources with lower bounce rates.
 
 ### Query 3: Revenue by traffic source by week, by month in June 2017
 ```sql
@@ -112,6 +112,8 @@ UNION ALL
  | 7	 | Week | 201724 | google | 9217.17 
  | 8   | ...
 
+ (direct) traffic brings highest revenue, followed by google, with a down trend to the end of the month. Consider an increasing investment in direct ads and optimizing existing campaigns for even better results.
+
 ### Query 04: Average number of pageviews by purchaser type (purchasers vs non-purchasers) in June, July 2017.
 ```sql
 WITH 
@@ -150,6 +152,9 @@ ORDER BY 1;
  |---|---|---|---
  | 1	 | 201706 | 94.02050113895217 | 316.86558846341671
  | 2	 | 201707 | 124.23755186721992 | 334.05655979568053
+
+Both purchase and non-purchase pageviews have increased from June to July, but there's a noticeable increase in pageviews for purchases by ratio, indicating a general rise in user activity and engagement on the site. 
+Investigate what specific factors contributed to the increased pageviews and purchases in July is the thing we should do next. 
 
 ### Query 05: Average number of transactions per user that made a purchase in July 2017
 ```sql
