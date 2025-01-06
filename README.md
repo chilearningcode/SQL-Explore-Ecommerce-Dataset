@@ -112,7 +112,8 @@ UNION ALL
  | 7	 | Week | 201724 | google | 9217.17 
  | 8   | ...
 
- (direct) traffic brings highest revenue, followed by google, with a down trend to the end of the month. Consider an increasing investment in direct ads and optimizing existing campaigns for even better results.
+(direct) traffic brings highest revenue, followed by google, with a down trend to the end of the month. 
+Consider an increasing investment in direct ads and optimizing existing campaigns for even better results.
 
 ### Query 04: Average number of pageviews by purchaser type (purchasers vs non-purchasers) in June, July 2017.
 ```sql
@@ -172,6 +173,8 @@ ORDER BY 1;
  |---|---|---
  | 1	 | 201707 | 4.16390041493776
 
+The average number of transactions per user who made a purchase is approximately 4.16. This indicates that users who made purchases were likely to make multiple transactions within the same month.
+
 ### Query 06: Average amount of money spent per session. Only include purchaser data in July 2017
 ```sql 
 SELECT 
@@ -186,6 +189,8 @@ GROUP BY 1;
 | Row	| month| avg_revenue_by_user_per_visit
 |---|---|---
 | 1	| 201707| 43.86
+
+The average revenue per user per visit was approximately $43.86. This indicates a healthy revenue per session for users who made purchases.
 
 ### Query 07: Other products purchased by customers who purchased product "YouTube Men's Vintage Henley" in July 2017.
 ```sql 
@@ -232,6 +237,9 @@ ORDER BY 2 desc;
 | 7	| Android Men's Vintage Henley| 2
 | 8 | ...
 
+On Juny 2017, *"Google Sunglasses"* were the most popular item purchased by customers who bought the *"YouTube Men's Vintage Henley"*, with 20 units sold.
+Create bundle deals featuring popular combinations like "YouTube Men's Vintage Henley" with "Google Sunglasses" and other related products. This could encourage customers to make larger purchases and increase overall sales.
+
 ### Query 08: Calculate cohort map from product view to addtocart to purchase in Jan, Feb and March 2017.
 ```sql 
 WITH product_data as(
@@ -260,9 +268,12 @@ FROM product_data;
 | 2	| 201702| 21489| 7360| 2060| 34.25| 9.59
 | 3	| 201703| 23549| 8782| 2977| 37.29| 12.64
 
+The add-to-cart conversion rate has improved each month, indicating growing user engagement with products.
+The purchase conversion rate is also on an upward trend, suggesting more effective conversion strategies over time.
+Identify and analyze the strategies implemented in March that led to the highest conversion rates.
 
-## IV. Conclusion 
-
+## III. Conclusion 
+In summary, our in-depth analysis of the eCommerce dataset reveals crucial insights into monthly trends, bounce rates, purchase behavior, page views, transactions, revenue, and traffic sources. These findings highlight key patterns and correlations that can guide strategic decisions, improve customer engagement, and drive revenue growth. By carefully evaluating these metrics, this project emphasizes the vital role of data-driven strategies in optimizing eCommerce operations and boosting overall performance.
 
 
 
