@@ -58,6 +58,8 @@ ORDER BY 2 desc, 3 desc;
 | 7 | google.com | 368 | 183 | 49.728 |
 | 8 | ... |
 
+Google drives the highest traffic but also high on bounce rate. YouTube and Facebook have the highest bounce rate (>60), while (direct) traffic shows better engagement (<40)
+
 ### Query 3: Revenue by traffic source by week, by month in June 2017
 ```sql
 WITH  
