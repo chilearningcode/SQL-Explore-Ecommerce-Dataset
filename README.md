@@ -14,21 +14,12 @@ The ga_sessions e-commerce dataset, available on BigQuery, provides comprehensiv
 
 ## II. Result (in this chapter must have 2 part, 1 for the generally insight, 1 for the conclusion)
 ### Insight 
-
+- Traffic and Bounce rate: Google drives the highest traffic but also high on bounce rate, while (direct) traffic source has the best performace with lowest bounce rate also the highest revenue.
+- Customer Behavior: users who made purchases were likely to make multiple transactions within the same month. On Juny 2017, *"Google Sunglasses"* were the most popular item purchased by customers who bought the *"YouTube Men's Vintage Henley"*
+- Conversion rate: has increased over month, indicating growing user engagement with products.
 
 ## III. Eploring the Dataset 
 ### Apply Problem Solving 
-
-| | Understand Problem | Break it down into smaller pieces | Ideate | Implement 
-|-|-|-|-|-
-|Q1 | Calculate total of visits, pageview, transaction for Jan, Feb and March 2017 | Filter for month and year <br> calculate sum of ... and grouped by month | 
-|Q2 | Find bound rate by each traffic source in July 2017 | Filter for month and year <br> calculate sum of ... and grouped by month
-|Q3
-|Q4
-|Q5
-|Q6
-|Q7
-|Q8
 
 | Understand Problem | Break it down into smaller pieces | Ideate | Implement and Review 
 |-|-|-|-
