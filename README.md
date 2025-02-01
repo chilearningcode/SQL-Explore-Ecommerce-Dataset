@@ -12,8 +12,7 @@ The ga_sessions e-commerce dataset, available on BigQuery, provides comprehensiv
 - Enter the project ID **"bigquery-public-data.google_analytics_sample.ga_sessions"** and click "Enter".
 - Click on the **"ga_sessions_"** table to open it.
 
-## II. Result (in this chapter must have 2 part, 1 for the generally insight, 1 for the conclusion)
-### Insight 
+## II. Insight
 - Traffic and Bounce rate: Google drives the highest traffic but also high on bounce rate, while (direct) traffic source has the best performace with lowest bounce rate also the highest revenue.
 - Customer Behavior: users who made purchases were likely to make multiple transactions within the same month. On Juny 2017, *"Google Sunglasses"* were the most popular item purchased by customers who bought the *"YouTube Men's Vintage Henley"*
 - Conversion rate: has increased over month, indicating growing user engagement with products.
