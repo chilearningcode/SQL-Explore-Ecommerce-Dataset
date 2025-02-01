@@ -32,7 +32,7 @@ The ga_sessions e-commerce dataset, available on BigQuery, provides comprehensiv
 
 | Understand Problem | Break it down into smaller pieces | Ideate | Implement and Review 
 |-|-|-|-
-| Which to be calculated (sum, count, ratio, etc.) and grouped <br> Does it needs any filter (time, conditions, etc.) | Which tables have data that I want to get <br> Which columns have data corresponded to the problem <br> Can I get the data I by one step, if not, break down even smaller | How many step did I need to get the final result <br> Is it optimized | 
+| Which to be calculated (sum, count, ratio, etc.) and grouped? <br> Does it needs any filter (time, conditions, etc.)? | Which tables have data that I want to get? <br> Which columns have data corresponded to the problem? <br> Can I get the data I by one step, if not, break down even smaller? | How many step did I need to get the final result? <br> Is it optimized? | 
 
 ### Implement Step 
 #### Query 01: calculate total visit, pageview, transaction for Jan, Feb and March 2017 (order by month)
