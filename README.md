@@ -17,9 +17,24 @@ The ga_sessions e-commerce dataset, available on BigQuery, provides comprehensiv
 
 
 ## III. Eploring the Dataset 
-### Apply Problem solving 
+### Apply Problem Solving 
 
+| | Understand Problem | Break it down into smaller pieces | Ideate | Implement 
+|-|-|-|-|-
+|Q1 | Calculate total of visits, pageview, transaction for Jan, Feb and March 2017 | Filter for month and year <br> calculate sum of ... and grouped by month | 
+|Q2 | Find bound rate by each traffic source in July 2017 | Filter for month and year <br> calculate sum of ... and grouped by month
+|Q3
+|Q4
+|Q5
+|Q6
+|Q7
+|Q8
 
+| Understand Problem | Break it down into smaller pieces | Ideate | Implement and Review 
+|-|-|-|-
+| Which to be calculated (sum, count, ratio, etc.) and grouped <br> Does it needs any filter (time, conditions, etc.) | Which tables have data that I want to get <br> Which columns have data corresponded to the problem <br> Can I get the data I by one step, if not, break down even smaller | How many step did I need to get the final result <br> Is it optimized | 
+
+### Implement Step 
 #### Query 01: calculate total visit, pageview, transaction for Jan, Feb and March 2017 (order by month)
 ```sql
 SELECT DISTINCT 
@@ -48,7 +63,7 @@ SELECT DISTINCT
   , count(totals.visits) total_visits
   , count(totals.bounces) total_no_of_bounces
   , round(count(totals.bounces)*100.0 /count(totals.visits), 3) bounce_rates
-FROM `bigquery-public-data.google_analytics_sample.ga_sessions_201707*`
+FROM `bigquery-public-data.google_analytics_sample.ga_sessions_201707*` -- filter for year and month directly in FROM statement 
 GROUP BY 1
 ORDER BY 2 desc, 3 desc;
 ```
