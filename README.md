@@ -15,10 +15,8 @@ The ga_sessions e-commerce dataset, available on BigQuery, provides comprehensiv
 ## II. Result (in this chapter must have 2 part, 1 for the generally insight, 1 for the conclusion)
 ### Insight 
 
-### Conclusion 
-In summary, our in-depth analysis of the eCommerce dataset reveals crucial insights into monthly trends, bounce rates, purchase behavior, page views, transactions, revenue, and traffic sources. These findings highlight key patterns and correlations that can guide strategic decisions, improve customer engagement, and drive revenue growth. By carefully evaluating these metrics, this project emphasizes the vital role of data-driven strategies in optimizing eCommerce operations and boosting overall performance.
 
-## II. Eploring the Dataset 
+## III. Eploring the Dataset 
 
 ### Query 01: calculate total visit, pageview, transaction for Jan, Feb and March 2017 (order by month)
 ```sql
@@ -277,6 +275,10 @@ FROM product_data;
 The add-to-cart conversion rate has improved each month, indicating growing user engagement with products.
 The purchase conversion rate is also on an upward trend, suggesting more effective conversion strategies over time.
 Identify and analyze the strategies implemented in March that led to the highest conversion rates.
+
+## IV. Conclusion 
+In summary, our in-depth analysis of the eCommerce dataset reveals crucial insights into monthly trends, bounce rates, purchase behavior, page views, transactions, revenue, and traffic sources. These findings highlight key patterns and correlations that can guide strategic decisions, improve customer engagement, and drive revenue growth. By carefully evaluating these metrics, this project emphasizes the vital role of data-driven strategies in optimizing eCommerce operations and boosting overall performance.
+
 
 
 
