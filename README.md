@@ -17,8 +17,10 @@ The ga_sessions e-commerce dataset, available on BigQuery, provides comprehensiv
 
 
 ## III. Eploring the Dataset 
+### Apply Problem solving 
 
-### Query 01: calculate total visit, pageview, transaction for Jan, Feb and March 2017 (order by month)
+
+#### Query 01: calculate total visit, pageview, transaction for Jan, Feb and March 2017 (order by month)
 ```sql
 SELECT DISTINCT 
   format_date("%Y%m",parse_date("%Y%m%d", date)) as month 
@@ -39,7 +41,7 @@ ORDER BY 1;
 Pageviews are relatively stable, with a slight dip in February but recovering in March. Transactions consistently increase over the three months, with a significant jump in March. 
 The data suggests an upward trend in user engagement and transactions as the quarter progresses, which could be due to promotional activities or seasonal factors.
 
-### Query 02: Bounce rate per traffic source in July 2017 (Bounce_rate = num_bounce/total_visit) (order by total_visit DESC)
+#### Query 02: Bounce rate per traffic source in July 2017 (Bounce_rate = num_bounce/total_visit) (order by total_visit DESC)
 ```sql 
 SELECT DISTINCT
   trafficSource.source
@@ -64,7 +66,7 @@ ORDER BY 2 desc, 3 desc;
 Google drives the highest traffic but also high on bounce rate. YouTube and Facebook have the highest bounce rate (>60), while (direct) traffic shows better engagement (<40). 
 Consider focusing on sources with lower bounce rates.
 
-### Query 3: Revenue by traffic source by week, by month in June 2017
+#### Query 3: Revenue by traffic source by week, by month in June 2017
 ```sql
 WITH  
   month_data as (
@@ -119,7 +121,7 @@ UNION ALL
 (direct) traffic brings highest revenue, followed by google, with a down trend to the end of the month. 
 Consider an increasing investment in direct ads and optimizing existing campaigns for even better results.
 
-### Query 04: Average number of pageviews by purchaser type (purchasers vs non-purchasers) in June, July 2017.
+#### Query 04: Average number of pageviews by purchaser type (purchasers vs non-purchasers) in June, July 2017.
 ```sql
 WITH 
   p_data as (
@@ -161,7 +163,7 @@ ORDER BY 1;
 Both purchase and non-purchase pageviews have increased from June to July, but there's a noticeable increase in pageviews for purchases by ratio, indicating a general rise in user activity and engagement on the site. 
 Investigate what specific factors contributed to the increased pageviews and purchases in July is the thing we should do next. 
 
-### Query 05: Average number of transactions per user that made a purchase in July 2017
+#### Query 05: Average number of transactions per user that made a purchase in July 2017
 ```sql
 SELECT  
   format_date("%Y%m",parse_date("%Y%m%d", date)) as month 
@@ -179,7 +181,7 @@ ORDER BY 1;
 
 The average number of transactions per user who made a purchase is approximately 4.16. This indicates that users who made purchases were likely to make multiple transactions within the same month.
 
-### Query 06: Average amount of money spent per session. Only include purchaser data in July 2017
+#### Query 06: Average amount of money spent per session. Only include purchaser data in July 2017
 ```sql 
 SELECT 
   format_date("%Y%m",parse_date("%Y%m%d", date)) as month 
@@ -196,7 +198,7 @@ GROUP BY 1;
 
 The average revenue per user per visit was approximately $43.86. This indicates a healthy revenue per session for users who made purchases.
 
-### Query 07: Other products purchased by customers who purchased product "YouTube Men's Vintage Henley" in July 2017.
+#### Query 07: Other products purchased by customers who purchased product "YouTube Men's Vintage Henley" in July 2017.
 ```sql 
 WITH 
   base_product_data as (
@@ -244,7 +246,7 @@ ORDER BY 2 desc;
 On Juny 2017, *"Google Sunglasses"* were the most popular item purchased by customers who bought the *"YouTube Men's Vintage Henley"*, with 20 units sold.
 Create bundle deals featuring popular combinations like "YouTube Men's Vintage Henley" with "Google Sunglasses" and other related products. This could encourage customers to make larger purchases and increase overall sales.
 
-### Query 08: Calculate cohort map from product view to addtocart to purchase in Jan, Feb and March 2017.
+#### Query 08: Calculate cohort map from product view to addtocart to purchase in Jan, Feb and March 2017.
 ```sql 
 WITH product_data as(
 	SELECT
