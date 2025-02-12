@@ -26,20 +26,16 @@ Tools Used: SQL - BigQuery Platform
 
 ### 👤 Who is this project for?  
 
-
 ➡️ **Marketing Manager** who want to understand the customer segmentation. 
 
 ###  ❓Business Questions:  
 
-- Analyze data on items, sales, order quantities, growth rates, top categories, top territories, and total discount costs by subcategories.
-- Assess customer retention rates, stock level trends, month-over-month differences, and stock-to-sales ratios.
-- Evaluate the number and value of pending orders in 2014.
+- How can we analyze customer behavior, sales trends, and traffic performance to develop an effective new marketing strategy?
 
 ### 🎯Project Outcome:  
 
-- **Sales and Growth Trends**: Bike Racks and Road Frames achieved the highest sales revenue and quantity, respectively. Mountain Frames and Socks showed notable year-over-year growth.
-- **Discounts and Customer Retention**: Helmets had continuous discount promotions with increased discount costs from 2012 to 2013, while customer retention dropped significantly after the first purchase, indicating the need for better retention strategies.
-- **Stock and Order Management**: Stock levels consistently decreased each quarter, suggesting strong sales. High pending order counts highlight the necessity of revamping the order process to drive higher sales revenue.
+- **Key Insights**: Analysis reveals monthly trends, high traffic from Google with a high bounce rate, repeat purchases within the same month, and increasing conversion rates, all highlighting user engagement and behavior.
+- **Strategic Focus**: These findings emphasize the importance of data-driven strategies to enhance customer engagement, optimize eCommerce operations, and drive revenue growth.
 
 ---
 
@@ -64,41 +60,9 @@ Tools Used: SQL - BigQuery Platform
 ### 📊 Data Structure & Relationships  
 
 #### 1️⃣ Tables Used:  
-There're **6 tables** were used in this project  
+There're only 1 table was used in this project 
 
-#### 2️⃣ Table Schema & Data Snapshot  
-
-Table 1: Sales.SalesOrderHeader  
-
-
-
-
-Table 2: Sales.SalesOrderDetail  
-
-
-
-
-Table 3: Production.Product  
-
-
-
-
-Table 4: Production.ProductSubcategory  
-
-
-
-
-Table 5: Production.WorkOrder  
-
-
-
-Table 6: Purchasing.PurchaseOrderHeader  
-
-
-
-
-#### 3️⃣ Data Relationships:  
-
+➡️ ga_sessions_
 
 
 ---
