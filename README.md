@@ -1,7 +1,7 @@
 
 ![sqlecommerce](https://github.com/user-attachments/assets/79b1423a-a760-4a8d-b964-898c48f0f8d0)
 
-# 📊 Project Title: Explore E-commerce Dataset | Analyze Website's Performance
+# 📊 Project Title: Ecommerce Website's Performance - Sales Trend Analytics
 Author: Tri Nguyen  
 Date: Nov. 14, 2024 
 Tools Used: SQL - BigQuery Platform 
