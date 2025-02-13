@@ -79,6 +79,7 @@ There're only 1 table was used in this project
 ## 📊 Explore the Dataset & Generate Insights
 
 #### Query 1️⃣: calculate total visit, pageview, transaction for Jan, Feb and March 2017 (order by month)
+> To evaluate the website's performance through total visits, pageviews, and transactions 
 ```sql
 SELECT DISTINCT 
   format_date("%Y%m",parse_date("%Y%m%d", date)) as month 
@@ -101,6 +102,7 @@ The data suggests an upward trend in user engagement and transactions as the qua
 
 
 #### Query 2️⃣: Bounce rate per traffic source in July 2017 (Bounce_rate = num_bounce/total_visit) (order by total_visit DESC)
+> A bounce rate indicates that customers who visited our website left without making a purchase.
 ```sql 
 SELECT DISTINCT
   trafficSource.source
@@ -127,6 +129,7 @@ Consider focusing on sources with lower bounce rates.
 
 
 #### Query 3️⃣: Revenue by traffic source by week, by month in June 2017
+> To evaluate the website's performance efficiency based on traffic sources  
 ```sql
 WITH  
   month_data as (
@@ -183,6 +186,7 @@ Consider an increasing investment in direct ads and optimizing existing campaign
 
 
 #### Query 4️⃣: Query 04: Average number of pageviews by purchaser type (purchasers vs non-purchasers) in June, July 2017.
+> To understand customers' behavior
 ```sql
 WITH 
   p_data as (
@@ -226,6 +230,7 @@ Investigate what specific factors contributed to the increased pageviews and pur
 
 
 #### Query 5️⃣: Average number of transactions per user that made a purchase in July 2017
+> To determine the number of transactions each customer has made within a specific time period 
 ```sql
 SELECT  
   format_date("%Y%m",parse_date("%Y%m%d", date)) as month 
@@ -245,6 +250,7 @@ The average number of transactions per user who made a purchase is approximately
 
 
 #### Query 6️⃣: Average amount of money spent per session. Only include purchaser data in July 2017
+> To determine the amount of money each customer has paid within a specific time period
 ```sql 
 SELECT 
   format_date("%Y%m",parse_date("%Y%m%d", date)) as month 
@@ -263,6 +269,7 @@ GROUP BY 1;
 
 
 #### Query 7️⃣: Query 07: Other products purchased by customers who purchased product "YouTube Men's Vintage Henley" in July 2017.
+> To identify additional products customers frequently buy with "YouTube Men's Vintage Henley" in July 2017 
 ```sql 
 WITH 
   base_product_data as (
@@ -311,8 +318,8 @@ ORDER BY 2 desc;
 Create bundle deals featuring popular combinations like "YouTube Men's Vintage Henley" with "Google Sunglasses" and other related products. This could encourage customers to make larger purchases and increase overall sales.
 
 
-
 #### Query 8️⃣: Calculate cohort map from product view to addtocart to purchase in Jan, Feb and March 2017.
+> To analyze the efficiency of the buying process and customers' behavior from product view to add-to-cart to purchase within a specific time period 
 ```sql 
 WITH product_data as(
 	SELECT
