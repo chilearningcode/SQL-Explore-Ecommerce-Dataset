@@ -118,11 +118,7 @@ ORDER BY 2 desc, 3 desc;
 | 1 | google | 38400 | 19798 | 51.557	| 
 | 2 | (direct) | 19891 | 8606 | 43.266 |
 | 3 | youtube.com | 6351 | 4238 | 66.73 |
-| 4 | analytics.google.com | 1972 | 1064 | 53.955 |
-| 5 | Partners | 1788 | 936 | 52.349 |
-| 6 | m.facebook.com | 669 | 430 | 64.275 |
-| 7 | google.com | 368 | 183 | 49.728 |
-| 8 | ... |
+| 4 |... |
 
 💡 Google drives the highest traffic but also high on bounce rate. YouTube and Facebook have the highest bounce rate (>60), while (direct) traffic shows better engagement (<40). <br> 
 Consider focusing on sources with lower bounce rates.
@@ -175,11 +171,7 @@ UNION ALL
  | 1	 | Month | 201706 | (direct) | 97333.6197
  | 2	 | Week | 201724 | (direct) | 30908.9099
  | 3	 | Week | 201725 | (direct) | 27295.3199
- | 4	 | Month | 201706 | google | 18757.1799
- | 5	 | Week | 201723 | (direct) | 17325.6799
- | 6	 | Week | 201726 | (direct) | 14914.81
- | 7	 | Week | 201724 | google | 9217.17 
- | 8   | ...
+ | 4	 | ...
 
 💡 (direct) traffic brings highest revenue, followed by google, with a down trend to the end of the month. <br> 
 Consider an increasing investment in direct ads and optimizing existing campaigns for even better results.
@@ -307,12 +299,8 @@ ORDER BY 2 desc;
 |---|---|---
 | 1	| Google Sunglasses| 20
 | 2	| Google Women's Vintage Hero Tee Black| 7
-| 3 | SPF-15 Slim & Slender Lip Balm| 6
-| 4	| Google Women's Short Sleeve Hero Tee Red Heather| 4
-| 5	| YouTube Men's Fleece Hoodie Black| 3
-| 6	| Google Men's Short Sleeve Badge Tee Charcoal| 3
-| 7	| Android Men's Vintage Henley| 2
-| 8 | ...
+| 3     | SPF-15 Slim & Slender Lip Balm| 6
+| 4	| ...
 
 💡 On Juny 2017, *"Google Sunglasses"* were the most popular item purchased by customers who bought the *"YouTube Men's Vintage Henley"*, with 20 units sold. <br> 
 Create bundle deals featuring popular combinations like "YouTube Men's Vintage Henley" with "Google Sunglasses" and other related products. This could encourage customers to make larger purchases and increase overall sales.
